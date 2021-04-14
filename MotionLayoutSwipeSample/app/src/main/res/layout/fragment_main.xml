@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="fragment"
+            type="sample.wgtech.motionlayout.swipe.MainFragment" />
+
+    </data>
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:id="@+id/mainMotionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutDescription="@xml/motion_scene"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/mainMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_700"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:text="@string/text_1"
+            android:textSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mainImageViewStars"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="12dp"
+            android:background="@color/teal_200"
+            android:src="@drawable/round_stars_24"
+            app:tint="@color/teal_200" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mainImageViewArchive"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#C948B7EA"
+            android:padding="12dp"
+            android:src="@drawable/round_archive_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/mainImageViewDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="#F44336"
+            android:padding="12dp"
+            android:src="@drawable/round_delete_24"/>
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</layout>
+

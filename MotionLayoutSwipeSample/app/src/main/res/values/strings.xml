@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MotionLayoutSwipeSample</string>
+
+    <string name="text_1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="text_2">Vivamus est purus, faucibus sit amet nisl ac, ultrices varius dolor.</string>
+    <string name="text_3">Suspendisse tristique rutrum dui, nec viverra diam mollis sit amet.</string>
+    <string name="text_4">Vestibulum ut eros at orci ullamcorper blandit.</string>
+    <string name="text_5">Sed eget fermentum nisl. Phasellus mollis enim in neque condimentum.</string>
+
+    <string name="message_delete">Message Deleted</string>
+</resources>
