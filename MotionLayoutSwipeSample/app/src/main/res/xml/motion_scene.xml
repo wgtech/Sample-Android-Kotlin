@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/mainMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:background="@color/teal_700"
+            android:padding="16dp"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Constraint
+            android:id="@+id/mainImageViewStars"
+            android:background="@color/teal_200"
+            app:layout_constraintBottom_toBottomOf="@id/mainMessage"
+            app:layout_constraintStart_toEndOf="@id/mainMessage"
+            app:layout_constraintEnd_toStartOf="@id/mainImageViewArchive"
+            app:layout_constraintTop_toTopOf="@id/mainMessage" />
+
+        <Constraint
+            android:id="@+id/mainImageViewArchive"
+            android:background="#F44336"
+            app:layout_constraintBottom_toBottomOf="@id/mainImageViewStars"
+            app:layout_constraintStart_toEndOf="@id/mainImageViewStars"
+            app:layout_constraintTop_toTopOf="@id/mainImageViewStars" />
+
+        <Constraint
+            android:id="@+id/mainImageViewDelete"
+            android:layout_width="50dp"
+            android:layout_height="52dp"
+            android:background="#FFEB3B"
+            app:layout_constraintBottom_toBottomOf="@id/mainMessage"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mainMessage" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end1">
+        <Constraint
+            android:id="@id/mainMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp" />
+
+        <Constraint
+            android:id="@+id/mainImageViewStars"
+            app:layout_constraintBottom_toBottomOf="@id/mainMessage"
+            app:layout_constraintTop_toTopOf="@id/mainMessage"
+            app:layout_constraintStart_toEndOf="@id/mainMessage"
+            app:layout_constraintEnd_toStartOf="@id/mainImageViewArchive" />
+
+        <Constraint
+            android:id="@+id/mainImageViewArchive"
+            app:layout_constraintBottom_toBottomOf="@id/mainMessage"
+            app:layout_constraintStart_toEndOf="@id/mainImageViewStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mainMessage" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end2">
+        <Constraint
+            android:id="@+id/mainMessage"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <Constraint
+            android:id="@+id/mainImageViewDelete"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:layout_constraintBottom_toBottomOf="@id/mainMessage"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/mainMessage"/>
+    </ConstraintSet>
+
+    <Transition
+        android:id="@+id/tid"
+        app:constraintSetEnd="@+id/end1"
+        app:constraintSetStart="@+id/start">
+        <OnSwipe
+            app:dragDirection="dragLeft"
+            app:touchAnchorId="@+id/mainMessage"
+            app:touchAnchorSide="right" />
+    </Transition>
+
+
+</MotionScene>
