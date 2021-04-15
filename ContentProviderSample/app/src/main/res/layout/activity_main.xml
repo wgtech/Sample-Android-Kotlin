@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="15dp">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveFileApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save (with File API)"
+        android:tag="saveFile"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnLoadFileApi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLoadFileApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load (with File API)"
+        android:tag="loadFile"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/btnSaveFileApi"
+        app:layout_constraintBottom_toTopOf="@id/btnSaveContentProviderApi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveContentProviderApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save (with ContentProvider)"
+        android:tag="saveContentProvider"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/btnLoadFileApi"
+        app:layout_constraintBottom_toTopOf="@id/btnLoadContentProviderApi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnLoadContentProviderApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load (with ContentProvider)"
+        android:tag="loadContentProvider"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_constraintTop_toBottomOf="@id/btnSaveContentProviderApi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
