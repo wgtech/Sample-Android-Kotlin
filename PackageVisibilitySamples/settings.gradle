@@ -1,0 +1,3 @@
+rootProject.name = "PackageVisibilitySamples"
+include ':app'
+include ':app_two'
