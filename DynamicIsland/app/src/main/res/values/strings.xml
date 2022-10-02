@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">DynamicIsland</string>
+
+    <string name="text_request_permission">Request new permission</string>
+    <string name="text_display_toggle_dynamic_island">Toggle DynamicIsland</string>
+    
+    <string name="message_not_have_manage_overlay">It doesn\'t have MANAGE_OVERLAY_PERMISSION</string>
+    <string name="message_have_manage_overlay">Already have MANAGE_OVERLAY_PERMISSION</string>
+    <string name="message_accessibility_service">It needs to be granted the Accessibility service</string>
+</resources>
